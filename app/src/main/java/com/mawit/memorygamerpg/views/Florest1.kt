@@ -14,6 +14,8 @@ class Florest1 : AppCompatActivity() {
     private lateinit var buttons: List<ImageView>
     private lateinit var cards: List<MemoryCard>
     private lateinit var images: MutableList<Int>
+    private lateinit var imagesShuffled: MutableList<Int>
+
     private var indexOfSingleSelectedCard: Int? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -56,10 +58,11 @@ class Florest1 : AppCompatActivity() {
     private fun updateViews() {
 
         cards.forEachIndexed { index, card ->
-            val button = buttons[index]
+            var button = buttons[index]
             if (card.isMatched){
-                button.alpha = 0.5f
+                button.alpha = 0.8f
             }
+
             if (card.isFaceUp){
                 button.setImageResource(images[index])
             }  else {

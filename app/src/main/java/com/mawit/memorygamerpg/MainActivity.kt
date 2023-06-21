@@ -20,8 +20,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
-        startActivity(Intent(this, Florest1::class.java))
-        finish()
+
 
 
     }
