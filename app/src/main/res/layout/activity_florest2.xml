@@ -134,7 +134,7 @@
             android:layout_height="50dp"
             android:layout_gravity="center_vertical"
             android:src="@drawable/trail_counter"
-            android:layout_marginStart="40dp"/>
+            android:layout_marginStart="30dp"/>
 
 
         <TextView
@@ -146,6 +146,14 @@
             android:layout_gravity="center_vertical"
             android:textColor="@color/white"
             android:textSize="36sp"
+            android:layout_marginStart="20dp"/>
+
+        <ImageView
+            android:id="@+id/btnInfo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/info"
             android:layout_marginStart="20dp"/>
 
 

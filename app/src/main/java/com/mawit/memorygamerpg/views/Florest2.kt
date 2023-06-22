@@ -31,6 +31,8 @@ class Florest2 : AppCompatActivity() {
         binding = ActivityFlorest2Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        alertInfo()
+
         var img1 = binding.btn1
         var img2 = binding.btn2
         var img3 = binding.btn3
@@ -46,6 +48,12 @@ class Florest2 : AppCompatActivity() {
 
         var txtlifes = binding.txtLifes
         var txtTrail = binding.txtTrail
+
+        var btnInfo = binding.btnInfo
+
+        btnInfo.setOnClickListener {
+            alertInfo()
+        }
 
         txtlifes.text = "3"
         txtTrail.text = "0"
@@ -173,6 +181,7 @@ class Florest2 : AppCompatActivity() {
 
         val view = layoutInflater.inflate(R.layout.alert_dialog_next_phase, null)
         alertBuilder.setView(view)
+        val alertDialog = alertBuilder.create()
 
         val btnOK = view.findViewById<ImageButton>(R.id.btnOK)
         btnOK.setOnClickListener {
@@ -180,7 +189,23 @@ class Florest2 : AppCompatActivity() {
             finish()
         }
 
+        alertDialog.show()
+    }
+
+    fun alertInfo(){
+        val alertBuilder = AlertDialog.Builder(this)
+
+        val view = layoutInflater.inflate(R.layout.alert_dialog_florest2_info, null)
+        alertBuilder.setView(view)
+
         val alertDialog = alertBuilder.create()
+
+        val btnOK = view.findViewById<ImageButton>(R.id.btnOK)
+        btnOK.setOnClickListener {
+            alertDialog.dismiss()
+        }
+
+
         alertDialog.show()
     }
 
