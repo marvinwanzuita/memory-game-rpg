@@ -178,7 +178,10 @@ class Florest1 : AppCompatActivity() {
 
         val btnOK = view.findViewById<ImageButton>(R.id.btnOK)
         btnOK.setOnClickListener {
-            startActivity(Intent(this, Florest2::class.java))
+
+            var intent = Intent(this, Florest2::class.java)
+            intent.putExtra("lifes", txtLifesInt)
+            startActivity(intent)
             finish()
         }
 

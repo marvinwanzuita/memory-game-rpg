@@ -7,7 +7,7 @@
     android:background="@drawable/floresta_fundo"
     android:gravity="center_vertical"
     android:orientation="vertical"
-    tools:context=".views.Florest3">
+    tools:context=".views.Florest4">
 
 
     <LinearLayout
@@ -103,6 +103,30 @@
 
         <ImageView
             android:id="@+id/btn16"
+            style="@style/ImageButton_Interrogation_Size_2" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/btn17"
+            style="@style/ImageButton_Interrogation_Size_2" />
+
+        <ImageView
+            android:id="@+id/btn18"
+            style="@style/ImageButton_Interrogation_Size_2" />
+
+        <ImageView
+            android:id="@+id/btn19"
+            style="@style/ImageButton_Interrogation_Size_2" />
+
+        <ImageView
+            android:id="@+id/btn20"
             style="@style/ImageButton_Interrogation_Size_2" />
 
     </LinearLayout>

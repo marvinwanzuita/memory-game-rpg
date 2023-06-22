@@ -10,25 +10,31 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.mawit.memorygamerpg.MainActivity
 import com.mawit.memorygamerpg.R
-import com.mawit.memorygamerpg.R.drawable.*
-import com.mawit.memorygamerpg.databinding.ActivityFlorest2Binding
+import com.mawit.memorygamerpg.R.drawable.bear
+import com.mawit.memorygamerpg.R.drawable.goblin
+import com.mawit.memorygamerpg.R.drawable.heart
+import com.mawit.memorygamerpg.R.drawable.interrogation
+import com.mawit.memorygamerpg.R.drawable.trail
+import com.mawit.memorygamerpg.R.drawable.tree
+import com.mawit.memorygamerpg.R.drawable.wolf
+import com.mawit.memorygamerpg.databinding.ActivityFlorest4Binding
 import com.mawit.memorygamerpg.memorycard.MemoryCard
 
 
-class Florest2 : AppCompatActivity() {
+class Florest4 : AppCompatActivity() {
 
-    private lateinit var binding : ActivityFlorest2Binding
+    private lateinit var binding: ActivityFlorest4Binding
     private lateinit var buttons: List<ImageView>
     private lateinit var cards: List<MemoryCard>
     private lateinit var images: MutableList<Int>
     private var indexOfSingleSelectedCard: Int? = null
     var totalCardsTurned = 0
-    var txtLifesInt : Int = 0
-    var txtTrailInt : Int = 0
+    var txtLifesInt = 3
+    var txtTrailInt = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityFlorest2Binding.inflate(layoutInflater)
+        binding = ActivityFlorest4Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
         alertInfo()
@@ -45,6 +51,14 @@ class Florest2 : AppCompatActivity() {
         var img10 = binding.btn10
         var img11 = binding.btn11
         var img12 = binding.btn12
+        var img13 = binding.btn13
+        var img14 = binding.btn14
+        var img15 = binding.btn15
+        var img16 = binding.btn16
+        var img17 = binding.btn17
+        var img18 = binding.btn18
+        var img19 = binding.btn19
+        var img20 = binding.btn20
 
         var txtlifes = binding.txtLifes
         var txtTrail = binding.txtTrail
@@ -56,17 +70,20 @@ class Florest2 : AppCompatActivity() {
         }
 
         val bundle = intent.extras
-
         txtLifesInt = bundle!!.getInt("lifes")
 
         txtlifes.text = txtLifesInt.toString()
         txtTrail.text = "0"
 
-        images = mutableListOf(goblin, tree, heart, trail, trail, trail)
+        images = mutableListOf(bear, goblin, goblin, tree, tree, wolf, heart, trail, trail, trail)
         images.addAll(images)
         images.shuffle()
 
-        buttons = listOf(img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12)
+        buttons = listOf(
+            img1, img2, img3, img4, img5, img6, img7, img8,
+            img9, img10, img11, img12, img13, img14, img15, img16,
+            img17, img18, img19, img20
+        )
 
         cards = buttons.indices.map { index ->
             MemoryCard(images[index])
@@ -85,14 +102,14 @@ class Florest2 : AppCompatActivity() {
 
         cards.forEachIndexed { index, card ->
             var button = buttons[index]
-            if (card.isMatched){
+            if (card.isMatched) {
                 button.alpha = 0.2f
             }
 
-            if (card.isFaceUp){
+            if (card.isFaceUp) {
                 button.setImageResource(images[index])
 
-            }  else {
+            } else {
                 button.setImageResource(interrogation)
             }
         }
@@ -102,12 +119,12 @@ class Florest2 : AppCompatActivity() {
     private fun updateModels(position: Int, txtLifes: TextView, txtTrail: TextView) {
         val card = cards[position]
 
-        if (card.isFaceUp){
+        if (card.isFaceUp) {
             Toast.makeText(this, "Card is already turned!", Toast.LENGTH_SHORT).show()
             return
         }
 
-        if (indexOfSingleSelectedCard == null){
+        if (indexOfSingleSelectedCard == null) {
             restoreCards()
             indexOfSingleSelectedCard = position
         } else {
@@ -119,48 +136,65 @@ class Florest2 : AppCompatActivity() {
     }
 
     private fun restoreCards() {
-        for (card in cards){
-            if (!card.isMatched){
+        for (card in cards) {
+            if (!card.isMatched) {
                 card.isFaceUp = false
             }
         }
     }
 
-    private fun checkForMatch(position1: Int, position2: Int, txtLifes: TextView, txtTrail: TextView) {
-        if (cards[position1].identifier == cards[position2].identifier){
+    private fun checkForMatch(
+        position1: Int,
+        position2: Int,
+        txtLifes: TextView,
+        txtTrail: TextView
+    ) {
+        if (cards[position1].identifier == cards[position2].identifier) {
             cards[position1].isMatched = true
             cards[position2].isMatched = true
             totalCardsTurned += 2
 
-            when(cards[position1].identifier){
+            when (cards[position1].identifier) {
+                bear -> {
+                    txtLifesInt -= 4
+                    txtLifes.text = txtLifesInt.toString()
+                }
+                wolf -> {
+                    txtLifesInt -= 3
+                    txtLifes.text = txtLifesInt.toString()
+                }
+
                 trail -> {
                     txtTrailInt += 2
                     txtTrail.text = txtTrailInt.toString()
                 }
+
                 goblin -> {
                     txtLifesInt -= 1
                     txtLifes.text = txtLifesInt.toString()
                 }
+
                 heart -> {
                     txtLifesInt++
                     txtLifes.text = txtLifesInt.toString()
                 }
+
                 tree -> {
                     txtLifesInt -= 2
                     txtLifes.text = txtLifesInt.toString()
                 }
             }
 
-            if (txtTrailInt == 6){
+            if (txtTrailInt == 6) {
                 alertNextPhase()
             }
-            if (txtLifesInt <= 0){
+            if (txtLifesInt <= 0) {
                 alertGameOver()
             }
         }
     }
 
-    fun alertGameOver(){
+    fun alertGameOver() {
 
         val alertBuilder = AlertDialog.Builder(this)
 
@@ -177,7 +211,7 @@ class Florest2 : AppCompatActivity() {
         alertDialog.show()
     }
 
-    fun alertNextPhase(){
+    fun alertNextPhase() {
 
         val alertBuilder = AlertDialog.Builder(this)
 
@@ -187,7 +221,7 @@ class Florest2 : AppCompatActivity() {
 
         val btnOK = view.findViewById<ImageButton>(R.id.btnOK)
         btnOK.setOnClickListener {
-            var intent = Intent(this, Florest3::class.java)
+            var intent = Intent(this, MainActivity::class.java)
             intent.putExtra("lifes", txtLifesInt)
             startActivity(intent)
             finish()
@@ -196,10 +230,11 @@ class Florest2 : AppCompatActivity() {
         alertDialog.show()
     }
 
-    fun alertInfo(){
+    fun alertInfo() {
+
         val alertBuilder = AlertDialog.Builder(this)
 
-        val view = layoutInflater.inflate(R.layout.alert_dialog_florest2_info, null)
+        val view = layoutInflater.inflate(R.layout.alert_dialog_florest4_info, null)
         alertBuilder.setView(view)
 
         val alertDialog = alertBuilder.create()
@@ -208,7 +243,6 @@ class Florest2 : AppCompatActivity() {
         btnOK.setOnClickListener {
             alertDialog.dismiss()
         }
-
 
         alertDialog.show()
     }

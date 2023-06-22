@@ -15,7 +15,7 @@
         android:layout_marginTop="40dp"
         android:text="WELL DONE"
         android:textAlignment="center"
-        android:textColor="@color/red"
+        android:textColor="@color/yellow_gold"
         android:textSize="48sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"

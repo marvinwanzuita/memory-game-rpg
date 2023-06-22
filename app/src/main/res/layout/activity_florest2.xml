@@ -10,17 +10,6 @@
     tools:context=".views.Florest2">
 
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="24dp"
-        android:fontFamily="@font/super_mario"
-        android:gravity="center"
-        android:text="Make 3 pairs of paths to advance to the next level"
-        android:textAllCaps="true"
-        android:textColor="@color/white"
-        android:textSize="16dp" />
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
