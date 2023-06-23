@@ -26,6 +26,7 @@ class Florest1 : AppCompatActivity() {
     var totalCardsTurned = 0
     var txtLifesInt = 3
     var txtTrailInt = 0
+    var txtCounterInt = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -45,6 +46,8 @@ class Florest1 : AppCompatActivity() {
         var txtTrail = binding.txtTrail
 
         var btnInfo = binding.btnInfo
+
+        var txtCounter = binding.txtCounter
 
         txtlifes.text = "3"
         txtTrail.text = "0"
@@ -69,7 +72,11 @@ class Florest1 : AppCompatActivity() {
             button.setOnClickListener {
                 updateModels(index, txtlifes, txtTrail)
                 updateViews()
+
+                txtCounterInt++
+                txtCounter.text = txtCounterInt.toString()
             }
+
         }
     }
 
@@ -181,6 +188,7 @@ class Florest1 : AppCompatActivity() {
 
             var intent = Intent(this, Florest2::class.java)
             intent.putExtra("lifes", txtLifesInt)
+            intent.putExtra("counter", txtCounterInt)
             startActivity(intent)
             finish()
         }

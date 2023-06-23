@@ -26,13 +26,14 @@ class Florest3 : AppCompatActivity() {
     var totalCardsTurned = 0
     var txtLifesInt = 3
     var txtTrailInt = 0
+    var txtCounterInt = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityFlorest3Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        alertInfo()
+
 
         var img1 = binding.btn1
         var img2 = binding.btn2
@@ -55,16 +56,21 @@ class Florest3 : AppCompatActivity() {
         var txtTrail = binding.txtTrail
 
         var btnInfo = binding.btnInfo
-
-        btnInfo.setOnClickListener {
-            alertInfo()
-        }
+        var txtCounter = binding.txtCounter
 
         val bundle = intent.extras
         txtLifesInt = bundle!!.getInt("lifes")
+        txtCounterInt = bundle.getInt("counter")
 
+        txtCounter.text = txtCounterInt.toString()
         txtlifes.text = txtLifesInt.toString()
         txtTrail.text = "0"
+
+
+        alertInfo()
+        btnInfo.setOnClickListener {
+            alertInfo()
+        }
 
         images = mutableListOf(goblin, goblin, tree, wolf, heart, trail, trail, trail)
         images.addAll(images)
@@ -82,6 +88,8 @@ class Florest3 : AppCompatActivity() {
                 updateModels(index, txtlifes, txtTrail)
                 updateViews()
 
+                txtCounterInt++
+                txtCounter.text = txtCounterInt.toString()
             }
         }
     }
@@ -198,6 +206,7 @@ class Florest3 : AppCompatActivity() {
         btnOK.setOnClickListener {
             var intent = Intent(this, Florest4::class.java)
             intent.putExtra("lifes", txtLifesInt)
+            intent.putExtra("counter", txtCounterInt)
             startActivity(intent)
             finish()
         }

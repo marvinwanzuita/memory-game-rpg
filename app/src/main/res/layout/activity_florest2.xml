@@ -9,12 +9,12 @@
     android:orientation="vertical"
     tools:context=".views.Florest2">
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
 
         <ImageView
             android:id="@+id/btn1"
@@ -92,58 +92,118 @@
 
     </LinearLayout>
 
+    <!--    LIFES AND PATHS-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:gravity="center_horizontal"
-        android:orientation="horizontal"
-        >
+        android:orientation="horizontal">
 
-        <ImageView
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:src="@drawable/life"
-            />
-
-
-        <TextView
-            android:id="@+id/txtLifes"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/super_mario"
-            android:text="3"
-            android:layout_gravity="center_vertical"
-            android:textColor="@color/white"
-            android:textSize="36sp"
-            android:layout_marginStart="10dp"/>
+            android:orientation="vertical">
 
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_gravity="center_vertical"
-            android:src="@drawable/trail_counter"
-            android:layout_marginStart="30dp"/>
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/heart" />
 
 
-        <TextView
-            android:id="@+id/txtTrail"
+            <TextView
+                android:id="@+id/txtLifes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/super_mario"
+                android:text="3"
+                android:textColor="@color/white"
+                android:textSize="30sp" />
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/super_mario"
-            android:text="0"
-            android:layout_gravity="center_vertical"
-            android:textColor="@color/white"
-            android:textSize="36sp"
-            android:layout_marginStart="20dp"/>
+            android:orientation="vertical"
+            android:layout_marginStart="24dp">
 
-        <ImageView
-            android:id="@+id/btnInfo"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_gravity="center_vertical"
-            android:src="@drawable/info"
-            android:layout_marginStart="20dp"/>
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical"
+
+                android:src="@drawable/trail_counter" />
+
+            <TextView
+                android:id="@+id/txtTrail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/super_mario"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="30sp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_marginStart="24dp">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+
+                android:src="@drawable/click" />
+
+            <TextView
+                android:id="@+id/txtCounter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="30sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_marginStart="24dp">
+
+            <ImageView
+                android:id="@+id/btnInfo"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/info" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="IN\nFO"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+
 
 
     </LinearLayout>
