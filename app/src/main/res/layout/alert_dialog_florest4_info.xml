@@ -19,11 +19,27 @@
         android:text="OBJECTIVE!!"
         android:textAllCaps="true"
         android:textColor="@color/yellow_gold"
-        android:textSize="26sp"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="331dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/super_mario"
+        android:gravity="center"
+        android:text="OBJECTIVE!!"
+        android:textAllCaps="true"
+        android:textColor="@color/yellow_gold"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout1" />
 
     <TextView
         android:id="@+id/textView"
@@ -67,30 +83,21 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
                     android:background="@drawable/trail" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginLeft="10dp"
                     android:gravity="center_vertical"
-                    android:text="x 6"
+                    android:text="3\nPairs\n=\nNext\nPhase"
                     android:textColor="@color/white"
-                    android:textSize="20sp" />
+                    android:textSize="14sp" />
 
 
             </LinearLayout>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginTop="10dp"
-                android:gravity="center"
-                android:text="NEXT PHASE"
-                android:textColor="@color/yellow_gold"
-                android:textSize="14sp" />
 
         </LinearLayout>
 
@@ -98,7 +105,7 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
+            android:layout_marginLeft="16dp"
             android:orientation="vertical">
 
             <LinearLayout
@@ -109,30 +116,21 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
                     android:background="@drawable/heart" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginLeft="16dp"
                     android:gravity="center_vertical"
-                    android:text="x 2"
+                    android:text="Pair\n=\n+ 1\nLife"
                     android:textColor="@color/white"
-                    android:textSize="20sp" />
+                    android:textSize="14sp" />
 
 
             </LinearLayout>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="10dp"
-                android:gravity="center"
-                android:text="+ 1 life"
-                android:textColor="@color/yellow_gold"
-                android:textSize="14sp" />
 
         </LinearLayout>
 
@@ -153,10 +151,10 @@
         android:textColor="@color/white"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/linearLayout2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout1" />
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <LinearLayout
         android:id="@+id/linearLayout2"
@@ -177,198 +175,142 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="10dp"
                 android:gravity="center"
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
                     android:background="@drawable/goblin" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginLeft="16dp"
                     android:gravity="center_vertical"
-                    android:text="x 2"
+                    android:text="pair\n=\n- 1\nLIFE"
                     android:textColor="@color/white"
-                    android:textSize="20sp" />
+                    android:textSize="14sp" />
 
 
             </LinearLayout>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="10dp"
-                android:gravity="center"
-                android:text="- 1 LIFE"
-                android:textColor="@color/yellow_gold"
-                android:textSize="14sp" />
-
 
         </LinearLayout>
-
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_marginLeft="16dp">
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="10dp"
                 android:gravity="center"
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
                     android:background="@drawable/tree" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginLeft="16dp"
                     android:gravity="center_vertical"
-                    android:text="x 2"
+                    android:text="pair\n=\n- 2\nLIFE"
                     android:textColor="@color/white"
-                    android:textSize="20sp" />
+                    android:textSize="14sp" />
 
 
             </LinearLayout>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:gravity="center"
-                android:text="- 2 LIFE"
-                android:textColor="@color/yellow_gold"
-                android:textSize="14sp" />
 
 
         </LinearLayout>
 
 
     </LinearLayout>
-
 
     <LinearLayout
         android:id="@+id/linearLayout3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center_horizontal"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
 
         <LinearLayout
-            android:id="@+id/linearLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:orientation="vertical"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+            android:orientation="horizontal">
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="10dp"
                 android:gravity="center"
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
                     android:background="@drawable/wolf" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginLeft="16dp"
                     android:gravity="center_vertical"
-                    android:text="x 2"
+                    android:text="pair\n=\n- 3\nLIFE"
                     android:textColor="@color/white"
-                    android:textSize="20sp" />
+                    android:textSize="14sp" />
 
 
             </LinearLayout>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="10dp"
-                android:gravity="center"
-                android:text="- 3 LIFE"
-                android:textColor="@color/yellow_gold"
-                android:textSize="14sp" />
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:orientation="vertical"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
-            android:layout_marginLeft="30dp">
-
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="16dp"
                 android:gravity="center"
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
                     android:background="@drawable/bear" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginLeft="16dp"
                     android:gravity="center_vertical"
-                    android:text="x 2"
+                    android:text="pair\n=\n- 5\nLIFE"
                     android:textColor="@color/white"
-                    android:textSize="20sp" />
+                    android:textSize="14sp" />
 
 
             </LinearLayout>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="10dp"
-                android:gravity="center"
-                android:text="- 4 LIFE"
-                android:textColor="@color/yellow_gold"
-                android:textSize="14sp" />
 
 
         </LinearLayout>
 
     </LinearLayout>
+
 
     <ImageButton
         android:id="@+id/btnOK"
         android:layout_width="120dp"
         android:layout_height="40dp"
         android:layout_gravity="center"
-        android:layout_marginTop="24dp"
         android:layout_marginBottom="32dp"
         android:background="@drawable/button_ok"
         app:layout_constraintBottom_toBottomOf="parent"
