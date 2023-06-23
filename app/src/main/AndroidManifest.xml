@@ -6,12 +6,15 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_logo_matching_game"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_logo_matching_game_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MemoryGameRPG"
         tools:targetApi="31">
+        <activity
+            android:name=".views.Florest5"
+            android:exported="false" />
         <activity
             android:name=".views.Florest4"
             android:exported="false" />

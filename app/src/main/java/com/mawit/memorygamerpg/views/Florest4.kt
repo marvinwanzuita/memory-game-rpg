@@ -31,14 +31,12 @@ class Florest4 : AppCompatActivity() {
     var totalCardsTurned = 0
     var txtLifesInt = 3
     var txtTrailInt = 0
-    var txtCounterInt = 0
+    var txtCounterInt = 40
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityFlorest4Binding.inflate(layoutInflater)
         setContentView(binding.root)
-
-
 
         var img1 = binding.btn1
         var img2 = binding.btn2
@@ -69,7 +67,7 @@ class Florest4 : AppCompatActivity() {
 
         val bundle = intent.extras
         txtLifesInt = bundle!!.getInt("lifes")
-        txtCounterInt = bundle.getInt("counter")
+        txtCounterInt += bundle.getInt("counter")
 
         txtCounter.text = txtCounterInt.toString()
         txtlifes.text = txtLifesInt.toString()
@@ -100,7 +98,7 @@ class Florest4 : AppCompatActivity() {
                 updateModels(index, txtlifes, txtTrail)
                 updateViews()
 
-                txtCounterInt++
+                txtCounterInt--
                 txtCounter.text = txtCounterInt.toString()
             }
         }
@@ -229,7 +227,7 @@ class Florest4 : AppCompatActivity() {
 
         val btnOK = view.findViewById<ImageButton>(R.id.btnOK)
         btnOK.setOnClickListener {
-            var intent = Intent(this, MainActivity::class.java)
+            var intent = Intent(this, Florest5::class.java)
             intent.putExtra("lifes", txtLifesInt)
             intent.putExtra("counter", txtCounterInt)
             startActivity(intent)

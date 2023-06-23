@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="24dp"
-        android:text="Your lifes has reached to zero. Returning to the main menu."
+        android:text="Your lifes/attempts has reached to zero. Returning to the main menu."
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="16sp"
