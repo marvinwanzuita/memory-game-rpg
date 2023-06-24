@@ -32,7 +32,7 @@ class Florest5 : AppCompatActivity() {
     var totalCardsTurned = 0
     var txtLifesInt = 3
     var txtTrailInt = 0
-    var txtCounterInt = 48
+    var txtCounterInt = 36
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -84,8 +84,8 @@ class Florest5 : AppCompatActivity() {
             alertInfo()
         }
 
-        images = mutableListOf(bear, goblin, goblin, tree, tree, wolf, wolf,
-                    heart, heart, trail, trail, trail)
+        images = mutableListOf(bear, goblin, goblin, goblin, tree, tree, wolf, wolf,
+                     heart, trail, trail, trail)
         images.addAll(images)
         images.shuffle()
 
@@ -233,7 +233,7 @@ class Florest5 : AppCompatActivity() {
 
         val btnOK = view.findViewById<ImageButton>(R.id.btnOK)
         btnOK.setOnClickListener {
-            var intent = Intent(this, MainActivity::class.java)
+            var intent = Intent(this, Florest6::class.java)
             intent.putExtra("lifes", txtLifesInt)
             intent.putExtra("counter", txtCounterInt)
             startActivity(intent)

@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/floresta_fundo"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    tools:context=".views.Florest6">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/btn1"
+            style="@style/ImageButton_Interrogation_Size_3" />
+
+        <ImageView
+            android:id="@+id/btn2"
+            style="@style/ImageButton_Interrogation_Size_3" />
+
+        <ImageView
+            android:id="@+id/btn3"
+            style="@style/ImageButton_Interrogation_Size_3" />
+
+        <ImageView
+            android:id="@+id/btn4"
+            style="@style/ImageButton_Interrogation_Size_3" />
+
+        <ImageView
+            android:id="@+id/btn5"
+            style="@style/ImageButton_Interrogation_Size_3" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/btn6"
+            style="@style/ImageButton_Interrogation_Size_3" />
+
+        <ImageView
+            android:id="@+id/btn7"
+            style="@style/ImageButton_Interrogation_Size_3" />
+
+        <ImageView
+            android:id="@+id/btn8"
+            style="@style/ImageButton_Interrogation_Size_3" />
+
+        <ImageView
+            android:id="@+id/btn9"
+            style="@style/ImageButton_Interrogation_Size_3" />
+
+        <ImageView
+            android:id="@+id/btn10"
+            style="@style/ImageButton_Interrogation_Size_3" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/btn11"
+            style="@style/ImageButton_Interrogation_Size_3" />
+
+        <ImageView
+            android:id="@+id/btn12"
+            style="@style/ImageButton_Interrogation_Size_3" />
+
+        <ImageView
+            android:id="@+id/btn13"
+            style="@style/ImageButton_Interrogation_Size_3" />
+
+        <ImageView
+            android:id="@+id/btn14"
+            style="@style/ImageButton_Interrogation_Size_3" />
+
+        <ImageView
+            android:id="@+id/btn15"
+            style="@style/ImageButton_Interrogation_Size_3" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/btn16"
+            style="@style/ImageButton_Interrogation_Size_3" />
+
+        <ImageView
+            android:id="@+id/btn17"
+            style="@style/ImageButton_Interrogation_Size_3" />
+
+        <ImageView
+            android:id="@+id/btn18"
+            style="@style/ImageButton_Interrogation_Size_3" />
+
+        <ImageView
+            android:id="@+id/btn19"
+            style="@style/ImageButton_Interrogation_Size_3" />
+
+        <ImageView
+            android:id="@+id/btn20"
+            style="@style/ImageButton_Interrogation_Size_3" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/btn21"
+            style="@style/ImageButton_Interrogation_Size_3" />
+
+        <ImageView
+            android:id="@+id/btn22"
+            style="@style/ImageButton_Interrogation_Size_3" />
+
+        <ImageView
+            android:id="@+id/btn23"
+            style="@style/ImageButton_Interrogation_Size_3" />
+
+        <ImageView
+            android:id="@+id/btn24"
+            style="@style/ImageButton_Interrogation_Size_3" />
+
+        <ImageView
+            android:id="@+id/btn25"
+            style="@style/ImageButton_Interrogation_Size_3" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/btn26"
+            style="@style/ImageButton_Interrogation_Size_3" />
+
+        <ImageView
+            android:id="@+id/btn27"
+            style="@style/ImageButton_Interrogation_Size_3" />
+
+        <ImageView
+            android:id="@+id/btn28"
+            style="@style/ImageButton_Interrogation_Size_3" />
+
+        <ImageView
+            android:id="@+id/btn29"
+            style="@style/ImageButton_Interrogation_Size_3" />
+
+        <ImageView
+            android:id="@+id/btn30"
+            style="@style/ImageButton_Interrogation_Size_3" />
+
+    </LinearLayout>
+
+
+
+
+
+    <!--    LIFES AND PATHS-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/heart" />
+
+
+            <TextView
+                android:id="@+id/txtLifes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/super_mario"
+                android:text="3"
+                android:textColor="@color/white"
+                android:textSize="30sp" />
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="24dp">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical"
+
+                android:src="@drawable/trail_counter" />
+
+            <TextView
+                android:id="@+id/txtTrail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/super_mario"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="30sp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_marginStart="24dp">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+
+                android:src="@drawable/click" />
+
+            <TextView
+                android:id="@+id/txtCounter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="30sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_marginStart="24dp">
+
+            <ImageView
+                android:id="@+id/btnInfo"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/info" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="IN\nFO"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

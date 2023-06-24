@@ -18,12 +18,14 @@ import com.mawit.memorygamerpg.R.drawable.trail
 import com.mawit.memorygamerpg.R.drawable.tree
 import com.mawit.memorygamerpg.R.drawable.wolf
 import com.mawit.memorygamerpg.databinding.ActivityFlorest4Binding
+import com.mawit.memorygamerpg.databinding.ActivityFlorest5Binding
+import com.mawit.memorygamerpg.databinding.ActivityFlorest6Binding
 import com.mawit.memorygamerpg.memorycard.MemoryCard
 
 
-class Florest4 : AppCompatActivity() {
+class Florest6 : AppCompatActivity() {
 
-    private lateinit var binding: ActivityFlorest4Binding
+    private lateinit var binding: ActivityFlorest6Binding
     private lateinit var buttons: List<ImageView>
     private lateinit var cards: List<MemoryCard>
     private lateinit var images: MutableList<Int>
@@ -31,11 +33,11 @@ class Florest4 : AppCompatActivity() {
     var totalCardsTurned = 0
     var txtLifesInt = 3
     var txtTrailInt = 0
-    var txtCounterInt = 30
+    var txtCounterInt = 45
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityFlorest4Binding.inflate(layoutInflater)
+        binding = ActivityFlorest6Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
         var img1 = binding.btn1
@@ -58,6 +60,16 @@ class Florest4 : AppCompatActivity() {
         var img18 = binding.btn18
         var img19 = binding.btn19
         var img20 = binding.btn20
+        var img21 = binding.btn21
+        var img22 = binding.btn22
+        var img23 = binding.btn23
+        var img24 = binding.btn24
+        var img25 = binding.btn25
+        var img26 = binding.btn26
+        var img27 = binding.btn27
+        var img28 = binding.btn28
+        var img29 = binding.btn29
+        var img30 = binding.btn30
 
         var txtlifes = binding.txtLifes
         var txtTrail = binding.txtTrail
@@ -79,14 +91,16 @@ class Florest4 : AppCompatActivity() {
             alertInfo()
         }
 
-        images = mutableListOf(bear, goblin, goblin, tree, tree, wolf, heart, trail, trail, trail)
+        images = mutableListOf(bear, bear, wolf, wolf, wolf, tree, tree, goblin, goblin, goblin, goblin,
+            heart, trail, trail, trail)
         images.addAll(images)
         images.shuffle()
 
         buttons = listOf(
             img1, img2, img3, img4, img5, img6, img7, img8,
             img9, img10, img11, img12, img13, img14, img15, img16,
-            img17, img18, img19, img20
+            img17, img18, img19, img20, img21, img22, img23, img24,
+            img25, img26, img27, img28, img29, img30
         )
 
         cards = buttons.indices.map { index ->
@@ -227,7 +241,7 @@ class Florest4 : AppCompatActivity() {
 
         val btnOK = view.findViewById<ImageButton>(R.id.btnOK)
         btnOK.setOnClickListener {
-            var intent = Intent(this, Florest5::class.java)
+            var intent = Intent(this, MainActivity::class.java)
             intent.putExtra("lifes", txtLifesInt)
             intent.putExtra("counter", txtCounterInt)
             startActivity(intent)
@@ -241,7 +255,7 @@ class Florest4 : AppCompatActivity() {
 
         val alertBuilder = AlertDialog.Builder(this)
 
-        val view = layoutInflater.inflate(R.layout.alert_dialog_florest4_info, null)
+        val view = layoutInflater.inflate(R.layout.alert_dialog_florest6_info, null)
         alertBuilder.setView(view)
 
         val alertDialog = alertBuilder.create()

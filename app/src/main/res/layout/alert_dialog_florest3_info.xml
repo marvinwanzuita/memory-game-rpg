@@ -148,7 +148,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginLeft="10dp"
                     android:gravity="center_vertical"
-                    android:text="+ 32\nattempts\nto the\ngoal"
+                    android:text="+ 24\nattempts\nto the\ngoal"
                     android:textColor="@color/white"
                     android:textSize="12sp" />
 

@@ -25,7 +25,7 @@ class Florest2 : AppCompatActivity() {
     var totalCardsTurned = 0
     var txtLifesInt : Int = 0
     var txtTrailInt : Int = 0
-    var txtCounterInt = 24
+    var txtCounterInt = 18
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
