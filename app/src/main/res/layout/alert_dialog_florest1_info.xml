@@ -86,7 +86,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginLeft="10dp"
                     android:gravity="center_vertical"
-                    android:text="Make 2 pairs\nfor the\nNext phase"
+                    android:text="Make 2 pairs\nfor the\nNext level"
                     android:textColor="@color/white"
                     android:textSize="18sp" />
 
