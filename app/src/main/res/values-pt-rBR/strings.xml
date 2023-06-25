@@ -24,4 +24,5 @@
     <string name="well_done">Muito bem</string>
     <string name="you_found_the_paths">Você encontrou os caminhos. Prossiga para o próximo Nível.</string>
     <string name="_16_attempts_to_the_goal">+ 16\ntentativas\npara o\nobjetivo</string>
+    <string name="pair_plus_1_life">Par\n=\n+ 1\nVida</string>
 </resources>

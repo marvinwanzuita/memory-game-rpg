@@ -23,4 +23,5 @@
     <string name="congratulations">Congratulations!! You survived the cursed forest. More adventures await and thanks for playing!!</string>
     <string name="well_done">WELL DONE</string>
     <string name="you_found_the_paths">You found the paths. Proceed to the next level.</string>
+    <string name="pair_plus_1_life">Pair\n=\n+ 1\nLife</string>
 </resources>
