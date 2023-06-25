@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Jogo da Memória - Aventura</string>
+    <string name="objective">OBJETIVO!!</string>
+    <string name="monsters">MONSTROS!!</string>
+    <string name="bonus">BÔNUS!</string>
+    <string name="pair_minus_1_life">Par\n=\n- 1\nVIDA</string>
+    <string name="make_2_pairs_for_the_next_level">Faça 2 pares\npara ir pro\npróximo nível</string>
+    <string name="make_3_pairs_for_the_next_level">Faça 3 pares\npara ir pro\npróximo nível</string>
+    <string name="_18_attempts_to_the_goal">+ 18\ntentativas\npara o\nobjetivo</string>
+    <string name="pair_minus_2_nlife">Par\n=\n- 2\nVIDA</string>
+    <string name="_24_attempts_to_the_goal">+ 24\ntentativas\npara o\nobjetivo</string>
+    <string name="pair_minus_3_life">Par\n=\n- 3\nVIDA</string>
+    <string name="_30_attempts_to_the_goal">+ 30\ntentativas\npara o\nobjetivo</string>
+    <string name="pair_minus_5_life">Par\n=\n- 5\nVIDA</string>
+    <string name="_36_attempts_to_the_goal">+ 36\ntentativas\npara o\nobjetivo</string>
+    <string name="_45_attempts_to_the_goal">+ 45\ntentativas\npara o\nobjetivo</string>
+    <string name="last_level">Último nível!!</string>
+    <string name="_62_attempts_to_the_goal">+ 62\ntentativas\npara o\nobjetivo</string>
+    <string name="game_over">Fim do Jogo</string>
+    <string name="reached_to_zero">Suas vidas/tentativas chegaram a zero. Retornando a jornada.</string>
+    <string name="escaped_from_the_forest">Escape da floresta!!</string>
+    <string name="congratulations">Parabéns!! Você sobreviveu a floresta amaldiçoada. Mais aventuras o esperam e obrigado por jogar!!</string>
+    <string name="well_done">Muito bem</string>
+    <string name="you_found_the_paths">Você encontrou os caminhos. Prossiga para o próximo Nível.</string>
+    <string name="_16_attempts_to_the_goal">+ 16\ntentativas\npara o\nobjetivo</string>
+</resources>

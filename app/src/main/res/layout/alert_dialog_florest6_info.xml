@@ -16,7 +16,7 @@
         android:layout_marginTop="32dp"
         android:fontFamily="@font/super_mario"
         android:gravity="center"
-        android:text="OBJECTIVE!!"
+        android:text="@string/objective"
         android:textAllCaps="true"
         android:textColor="@color/yellow_gold"
         android:textSize="24sp"
@@ -32,7 +32,7 @@
         android:layout_marginTop="24dp"
         android:fontFamily="@font/super_mario"
         android:gravity="center"
-        android:text="MONSTERS!!"
+        android:text="@string/monsters"
         android:textAllCaps="true"
         android:textColor="@color/yellow_gold"
         android:textSize="20sp"
@@ -46,7 +46,7 @@
         android:layout_marginTop="24dp"
         android:fontFamily="@font/super_mario"
         android:gravity="center"
-        android:text="BONUS!!"
+        android:text="@string/bonus"
         android:textAllCaps="true"
         android:textColor="@color/yellow_gold"
         android:textSize="20sp"
@@ -86,7 +86,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginLeft="10dp"
                     android:gravity="center_vertical"
-                    android:text="Make 3 pairs\nfor the\nNext level"
+                    android:text="@string/make_3_pairs_for_the_next_level"
                     android:textColor="@color/white"
                     android:textSize="18sp" />
 
@@ -148,7 +148,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginLeft="10dp"
                     android:gravity="center_vertical"
-                    android:text="+ 45\nattempts\nto the\ngoal"
+                    android:text="@string/_45_attempts_to_the_goal"
                     android:textColor="@color/white"
                     android:textSize="12sp" />
 
@@ -181,7 +181,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginLeft="10dp"
                     android:gravity="center_vertical"
-                    android:text="pair\n=\n+ 1\nLIFE"
+                    android:text="@string/pair_plus_1_life"
                     android:textColor="@color/white"
                     android:textSize="12sp" />
 
@@ -233,7 +233,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginLeft="10dp"
                 android:gravity="center_vertical"
-                android:text="pair\n=\n- 1\nLIFE"
+                android:text="@string/pair_minus_1_life"
                 android:textColor="@color/white"
                 android:textSize="12sp" />
 
@@ -255,7 +255,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginLeft="10dp"
                 android:gravity="center_vertical"
-                android:text="pair\n=\n- 2\nLIFE"
+                android:text="@string/pair_minus_2_nlife"
                 android:textColor="@color/white"
                 android:textSize="12sp" />
 
@@ -291,7 +291,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginLeft="10dp"
                 android:gravity="center_vertical"
-                android:text="pair\n=\n- 3\nLIFE"
+                android:text="@string/pair_minus_3_life"
                 android:textColor="@color/white"
                 android:textSize="12sp" />
 
@@ -313,7 +313,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginLeft="10dp"
                 android:gravity="center_vertical"
-                android:text="pair\n=\n- 5\nLIFE"
+                android:text="@string/pair_minus_5_life"
                 android:textColor="@color/white"
                 android:textSize="12sp" />
 
