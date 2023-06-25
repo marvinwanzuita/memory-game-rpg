@@ -1,17 +1,24 @@
 package com.mawit.memorygamerpg.views
 
+import android.content.ContentValues.TAG
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.gms.ads.AdError
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdSize
 import com.google.android.gms.ads.AdView
+import com.google.android.gms.ads.FullScreenContentCallback
+import com.google.android.gms.ads.LoadAdError
 import com.google.android.gms.ads.MobileAds
+import com.google.android.gms.ads.interstitial.InterstitialAd
+import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback
 import com.mawit.memorygamerpg.MainActivity
 import com.mawit.memorygamerpg.R
 import com.mawit.memorygamerpg.R.drawable.*
@@ -26,6 +33,7 @@ class Florest1 : AppCompatActivity() {
     private lateinit var buttons: List<ImageView>
     private lateinit var cards: List<MemoryCard>
     private lateinit var images: MutableList<Int>
+    private var mInterstitialAd: InterstitialAd? = null
     lateinit var mAdView: AdView
     private var indexOfSingleSelectedCard: Int? = null
     var totalCardsTurned = 0
@@ -177,6 +185,11 @@ class Florest1 : AppCompatActivity() {
         btnOK.setOnClickListener {
             startActivity(Intent(this, MainActivity::class.java))
             finish()
+            if (mInterstitialAd != null) {
+                mInterstitialAd?.show(this)
+            } else {
+                Log.d("TAG", "The interstitial ad wasn't ready yet.")
+            }
         }
 
         val alertDialog = alertBuilder.create()
@@ -198,6 +211,7 @@ class Florest1 : AppCompatActivity() {
             intent.putExtra("counter", txtCounterInt)
             startActivity(intent)
             finish()
+
         }
 
         val alertDialog = alertBuilder.create()
@@ -229,6 +243,53 @@ class Florest1 : AppCompatActivity() {
         banner.adUnitId = "ca-app-pub-5618593123155937/5577178315"
         mAdView = binding.adView
         mAdView.loadAd(adRequest)
+
+
+
+        InterstitialAd.load(
+            this,"ca-app-pub-5618593123155937/4724945853",
+            adRequest,
+            object : InterstitialAdLoadCallback() {
+                override fun onAdFailedToLoad(adError: LoadAdError) {
+                    adError.toString().let { Log.d(TAG, it) }
+                    mInterstitialAd = null
+                }
+
+                override fun onAdLoaded(interstitialAd: InterstitialAd) {
+                    Log.d(TAG, "Ad was loaded.")
+                    mInterstitialAd = interstitialAd
+                }
+            })
+
+        mInterstitialAd?.fullScreenContentCallback = object: FullScreenContentCallback() {
+            override fun onAdClicked() {
+                // Called when a click is recorded for an ad.
+                Log.d(TAG, "Ad was clicked.")
+            }
+
+            override fun onAdDismissedFullScreenContent() {
+                // Called when ad is dismissed.
+                Log.d(TAG, "Ad dismissed fullscreen content.")
+                mInterstitialAd = null
+            }
+
+            override fun onAdFailedToShowFullScreenContent(p0: AdError) {
+                // Called when ad fails to show.
+                Log.e(TAG, "Ad failed to show fullscreen content.")
+                mInterstitialAd = null
+            }
+
+            override fun onAdImpression() {
+                // Called when an impression is recorded for an ad.
+                Log.d(TAG, "Ad recorded an impression.")
+            }
+
+            override fun onAdShowedFullScreenContent() {
+                // Called when ad is shown.
+                Log.d(TAG, "Ad showed fullscreen content.")
+            }
+        }
+
     }
 
 
