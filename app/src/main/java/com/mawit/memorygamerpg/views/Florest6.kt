@@ -8,6 +8,10 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdSize
+import com.google.android.gms.ads.AdView
+import com.google.android.gms.ads.MobileAds
 import com.mawit.memorygamerpg.MainActivity
 import com.mawit.memorygamerpg.R
 import com.mawit.memorygamerpg.R.drawable.bear
@@ -34,11 +38,14 @@ class Florest6 : AppCompatActivity() {
     var txtLifesInt = 3
     var txtTrailInt = 0
     var txtCounterInt = 45
+    lateinit var mAdView: AdView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityFlorest6Binding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        initializeAds()
 
         var img1 = binding.btn1
         var img2 = binding.btn2
@@ -266,6 +273,16 @@ class Florest6 : AppCompatActivity() {
         }
 
         alertDialog.show()
+    }
+
+    fun initializeAds(){
+        MobileAds.initialize(this)
+        val banner = AdView(this)
+        val adRequest = AdRequest.Builder().build()
+        banner.setAdSize(AdSize.BANNER)
+        banner.adUnitId = "ca-app-pub-5618593123155937/5577178315"
+        mAdView = binding.adView
+        mAdView.loadAd(adRequest)
     }
 
 

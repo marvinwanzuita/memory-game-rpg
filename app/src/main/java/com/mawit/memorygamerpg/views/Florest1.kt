@@ -8,6 +8,10 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdSize
+import com.google.android.gms.ads.AdView
+import com.google.android.gms.ads.MobileAds
 import com.mawit.memorygamerpg.MainActivity
 import com.mawit.memorygamerpg.R
 import com.mawit.memorygamerpg.R.drawable.*
@@ -22,6 +26,7 @@ class Florest1 : AppCompatActivity() {
     private lateinit var buttons: List<ImageView>
     private lateinit var cards: List<MemoryCard>
     private lateinit var images: MutableList<Int>
+    lateinit var mAdView: AdView
     private var indexOfSingleSelectedCard: Int? = null
     var totalCardsTurned = 0
     var txtLifesInt = 3
@@ -32,6 +37,8 @@ class Florest1 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityFlorest1Binding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        initializeAds()
 
         var img1 = binding.btn1
         var img2 = binding.btn2
@@ -214,8 +221,15 @@ class Florest1 : AppCompatActivity() {
 
     }
 
-
-
+    fun initializeAds(){
+        MobileAds.initialize(this)
+        val banner = AdView(this)
+        val adRequest = AdRequest.Builder().build()
+        banner.setAdSize(AdSize.BANNER)
+        banner.adUnitId = "ca-app-pub-5618593123155937/5577178315"
+        mAdView = binding.adView
+        mAdView.loadAd(adRequest)
+    }
 
 
 }
